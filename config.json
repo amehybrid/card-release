@@ -1,0 +1,59 @@
+{
+    "CERT1": "/home/aaron/Documents/projects/card-release/APIConnect.crt",
+    "CERT2": "/home/aaron/Documents/projects/card-release/EOLDV2.crt",
+    "useDB2Credentials": true,
+    "db2Id": "AARON.",
+    "connectionString": "DRIVER={DB2};DATABASE=TEST01DB;HOSTNAME=127.0.0.1;UID=AARON;PWD=Darkness143;PORT=50001;PROTOCOL=TCPIP",
+    "NODE_ENV": "production",
+    "LOG": "/home/aaron/Documents/projects/card-release/app.log",
+    "CN": "API Connect",
+    "PORT": 8081,
+    "serverKey": "/home/aaron/Documents/projects/card-release/server.key",
+    "serverCert": "/home/aaron/Documents/projects/card-release/server.crt",
+    "isApicSelfSigned": false,
+    "apicOptions": {
+		"method": "GET",
+		"hostname": "api.us.apiconnect.ibmcloud.com",
+		"port": null,
+		"path": "/jrmarianobpicomph-dev/sb/eol/getrmtrailer?rmNumber=",
+		"headers": {
+			"x-ibm-client-id": "542a8f53-5a2e-4292-9a63-62c082b24d50",
+			"x-ibm-client-secret": "A0yQ1hO8sA5gI4pF3qW6aC7tI0iT6nF2gP0aH5vY4tB1lB1xR0",
+			"content-type": "application/json",
+			"accept": "application/json"
+		}
+	},
+    "apicOptions2": {
+		"method": "POST",
+		"hostname": "api.us.apiconnect.ibmcloud.com",
+		"port": null,
+		"path": "/jrmarianobpicomph-dev/sb/aaronmockupdatermtrailer/updatermtrailer",
+		"headers": {
+			"x-ibm-client-id": "542a8f53-5a2e-4292-9a63-62c082b24d50",
+			"x-ibm-client-secret": "A0yQ1hO8sA5gI4pF3qW6aC7tI0iT6nF2gP0aH5vY4tB1lB1xR0",
+			"content-type": "application/json",
+			"accept": "application/json"
+		}
+	},
+	"ldap": {
+		"url": "ldaps://10.233.192.111:636",
+		"bindDn": "CN=EOL NG LDAP,OU=EOLv3,DC=pmoeoldevel,DC=com",
+		"bindPassword": "P@ssw0rd",
+		"searchDn": "ou=EOLv3,dc=pmoeoldevel,dc=com",
+		"usernameField": "sAMAccountName"
+	},
+	"tlsOptions":{ 
+	  "rejectUnauthorized": false,
+	  "ciphers": "RC4-MD5"  
+	},
+	"emailApi": {
+		"method": "POST",
+		"hostname": "bpiusermanagersmtp.mybluemix.net",
+		"port": null,
+		"path": "/gmail",
+		"headers": {
+			"content-type": "application/json",
+			"accept": "application/json"
+		}		
+	}
+}

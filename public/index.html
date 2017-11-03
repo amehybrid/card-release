@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>BPI Card Release</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="css/cyrillic.css" rel="stylesheet" type="text/css">
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core Css -->
+    <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Waves Effect Css -->
+    <link href="plugins/node-waves/waves.css" rel="stylesheet" />
+    <!-- Animation Css -->
+    <link href="plugins/animate-css/animate.css" rel="stylesheet" />
+    <!-- Custom Css -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Sweetalert Css -->
+    <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+</head>
+
+<body class="signup-page">
+    <div class="signup-box">
+        <div class="logo">
+            <a href="javascript:void(0);">
+             <img alt="BPI&nbsp;Card Release" src="images/bpiLogo.png" width="40%;">
+            </a>            
+        </div>
+        <div class="card">
+            <div class="body">
+
+                <form id="sign_up" method="POST">
+                  <div class="msg">EMV Card Activation</div>
+
+                    <div class="input-group">
+                        <div class="form-line">
+                            <p><b>Institution Code</b></p>
+                            <select class="form-control show-tick" id="instCode" >
+                                <option value="">-- Please select --</option>
+                                <option value="BPI">BPI</option>
+                                <option value="BFB">BFB</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="form-line">
+                            <p><b>Maker ID</b></p>
+                            <input type="text" id="makerID" class="form-control" name="makerID" minlength="5" maxlength="19" placeholder="Enter Maker ID" reuqired>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="form-line">
+                            <p><b>Card Alias</b></p>
+                            <input type="number"  id="cardAlias" class="form-control" name="cardAlias" minlength="5" maxlength="16" placeholder="Enter Card Alias" required>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-block btn-lg bg-red waves-effect" data-toggle="modal" data-target="#smallModal">ACTIVATE</button>
+
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal fade" id="smallModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="smallModalLabel">EMV Card Activation</h4>
+                        </div>
+                        <div class="modal-body">
+                            You are about to activate:<br>
+                            Card Number:<br> 
+                            <div id="cardAlias">0000 0000 0000 0000</div><br>
+                            Do you wish to proceed?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link waves-effect">PROCEED</button>
+                            <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CANCEL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- Success -->
+    <div class="four-zero-four" hidden>
+        <div class="four-zero-four-container">
+            <div class="logo">
+                <a href="javascript:void(0);">
+                 <img alt="BPI&nbsp;Card Release" src="images/bpiLogo.png" width="40%;">
+                </a>            
+            </div>
+            <br><br><br>
+            <div class="error-message">You're BPI Card has been activated!</div>
+            <button class="btn btn-default btn-lg waves-effect">GO TO HOMEPAGE</a>
+            </button>
+        </div>
+    </div>    
+
+    <!-- Jquery Core Js -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="plugins/node-waves/waves.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/admin.js"></script>
+    <script src="js/pages/examples/sign-up.js"></script>
+    <script src="js/pages/ui/dialogs.js"></script>
+    <script src="js/pages/ui/modals.js"></script>
+
+    <!-- Demo Js -->
+    <script src="js/demo.js"></script>
+
+</body>
+
+</html>
