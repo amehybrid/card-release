@@ -1,40 +1,40 @@
 {
-    "CERT1": "/home/aaron/Documents/projects/card-release/APIConnect.crt",
-    "CERT2": "/home/aaron/Documents/projects/card-release/EOLDV2.crt",
+    "CERT1": "/card-release/APIConnect.crt",
+    "CERT2": "/card-release/EOLDV2.crt",
     "useDB2Credentials": true,
     "db2Id": "AARON.",
     "connectionString": "DRIVER={DB2};DATABASE=TEST01DB;HOSTNAME=127.0.0.1;UID=AARON;PWD=Darkness143;PORT=50001;PROTOCOL=TCPIP",
     "NODE_ENV": "production",
-    "LOG": "/home/aaron/Documents/projects/card-release/app.log",
+    "LOG": "/card-release/app.log",
     "CN": "API Connect",
     "PORT": 8081,
-    "serverKey": "/home/aaron/Documents/projects/card-release/server.key",
-    "serverCert": "/home/aaron/Documents/projects/card-release/server.crt",
-    "isApicSelfSigned": false,
+    "serverKey": "/card-release/server.key",
+    "serverCert": "/card-release/server.crt",
+    "isApicSelfSigned": true,
     "apicOptions": {
 		"method": "GET",
-		"hostname": "api.us.apiconnect.ibmcloud.com",
+		"hostname": "apignsdev.dom001c.local",
 		"port": null,
-		"path": "/jrmarianobpicomph-dev/sb/eol/getrmtrailer?rmNumber=",
+		"path": "/bpi/sb/eol/inquirermtrailer?rmNumber=",
 		"headers": {
-			"x-ibm-client-id": "542a8f53-5a2e-4292-9a63-62c082b24d50",
-			"x-ibm-client-secret": "A0yQ1hO8sA5gI4pF3qW6aC7tI0iT6nF2gP0aH5vY4tB1lB1xR0",
+			"x-ibm-client-id": "3226dd8c-6470-49e0-9f5e-a330d7a316e0",
+			"x-ibm-client-secret": "F8mO7oV3kV0oX2yE0fN0hI2uF4dD4fM0wW2fJ5vB1xF4jL5bV0",
 			"content-type": "application/json",
 			"accept": "application/json"
 		}
 	},
     "apicOptions2": {
 		"method": "POST",
-		"hostname": "api.us.apiconnect.ibmcloud.com",
+		"hostname": "apignsdev.dom001c.local",
 		"port": null,
-		"path": "/jrmarianobpicomph-dev/sb/aaronmockupdatermtrailer/updatermtrailer",
+		"path": "/bpi/sb/eol/updatermtrailer",
 		"headers": {
-			"x-ibm-client-id": "542a8f53-5a2e-4292-9a63-62c082b24d50",
-			"x-ibm-client-secret": "A0yQ1hO8sA5gI4pF3qW6aC7tI0iT6nF2gP0aH5vY4tB1lB1xR0",
+			"x-ibm-client-id": "df0b88c4-a2cf-43fd-95f6-5539a6a8a7e9",
+			"x-ibm-client-secret": "B1mB3sL0iN5uJ1qK5iV6dO3bM2bU8sU8iN1iM6gO4nV1gF4eF8",
 			"content-type": "application/json",
 			"accept": "application/json"
 		}
-	},
+	},	
 	"ldap": {
 		"url": "ldaps://10.233.192.111:636",
 		"bindDn": "CN=EOL NG LDAP,OU=EOLv3,DC=pmoeoldevel,DC=com",
@@ -48,10 +48,24 @@
 	},
 	"emailApi": {
 		"method": "POST",
-		"hostname": "bpiusermanagersmtp.mybluemix.net",
+		"hostname": "apignsdev.dom001c.local",
 		"port": null,
-		"path": "/gmail",
+		"path": "/bpi/sb/eol/email",
 		"headers": {
+			"x-ibm-client-id": "34dfe33e-f269-4ec9-8b26-e14417db21ed",
+			"x-ibm-client-secret": "Y8aO2oM4fS6eU7lS4pR8vV7qO5xM5pX2uU1mI8hG5xL3bS4jY0",
+			"content-type": "application/json",
+			"accept": "application/json"
+		}		
+	},
+	"ctxCardReleaseApiOptions": {
+		"method": "POST",
+		"hostname": "apignsdev.dom001c.local",
+		"port": null,
+		"path": "/bpi/sb/unitas/ctxcardrelease",
+		"headers": {
+			"x-ibm-client-id": "02bbae2a-8087-48c9-bc9a-c44913864852",
+			"x-ibm-client-secret": "S5bC3iO0xS8pY6dY4lV2jG4vY4xM0tU6gR8pM1fG3sV4vF2mN1",
 			"content-type": "application/json",
 			"accept": "application/json"
 		}		
