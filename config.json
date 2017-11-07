@@ -1,6 +1,6 @@
 {
-    "CERT1": "/card-release/APIConnect.crt",
-    "CERT2": "/card-release/EOLDV2.crt",
+    "CERT1": "C:\\Users\\maajumaquio\\card-release\\APIConnect.crt",
+    "CERT2": "C:\\Users\\maajumaquio\\card-release\\EOLDV2.crt",
     "useDB2Credentials": true,
     "db2Id": "AARON.",
     "connectionString": "DRIVER={DB2};DATABASE=TEST01DB;HOSTNAME=127.0.0.1;UID=AARON;PWD=Darkness143;PORT=50001;PROTOCOL=TCPIP",
@@ -8,8 +8,8 @@
     "LOG": "/card-release/app.log",
     "CN": "API Connect",
     "PORT": 8081,
-    "serverKey": "/card-release/server.key",
-    "serverCert": "/card-release/server.crt",
+    "serverKey": "C:\\Users\\maajumaquio\\card-release\\server.key",
+    "serverCert": "C:\\Users\\maajumaquio\\card-release\\server.crt",
     "isApicSelfSigned": true,
     "apicOptions": {
 		"method": "GET",

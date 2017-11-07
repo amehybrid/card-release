@@ -32,13 +32,13 @@
         <div class="card">
             <div class="body">
 
-                <form id="sign_up" method="POST">
+                <!-- <form id="sign_up" method="POST">
                   <div class="msg">EMV Card Activation</div>
 
                     <div class="input-group">
                         <div class="form-line">
                             <p><b>Institution Code</b></p>
-                            <select class="form-control show-tick" id="instCode" >
+                            <select class="form-control show-tick" id="instCode" required>
                                 <option value="">-- Please select --</option>
                                 <option value="BPI">BPI</option>
                                 <option value="BFB">BFB</option>
@@ -48,24 +48,61 @@
                     <div class="input-group">
                         <div class="form-line">
                             <p><b>Maker ID</b></p>
-                            <input type="text" id="makerID" class="form-control" name="makerID" minlength="4" maxlength="19" placeholder="Enter Maker ID" reuqired>
+                            <input type="text" id="makerID" class="form-control" name="makerID" minlength="4" maxlength="19" placeholder="Enter Maker ID" required>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="form-line">
                             <p><b>Card Alias</b></p>
-                            <input type="number"  id="cardAlias" class="form-control" name="cardAlias" minlength="5" maxlength="16" placeholder="Enter Card Alias" required>
+                            <input type="number" id="cardAlias" class="form-control" name="cardAlias" minlength="16" maxlength="19" placeholder="Enter Card Alias" required>
                         </div>
                     </div>
-
                     <button type="button" class="btn btn-block btn-lg bg-red waves-effect" data-toggle="modal" data-target="#smallModal" id="activateBtn">ACTIVATE</button>
+                </form> -->
 
-                </form>
+                <form id="form_advanced_validation" method="POST" novalidate="novalidate">
+                    <div class="msg">EMV Card Activation</div>
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <select class="form-control show-tick" id="instCode" required>
+                                            <option value=""></option>
+                                            <option value="BPI">BPI</option>
+                                            <option value="BFB">BFB</option>
+                                        </select>
+                                        <label class="form-label">Select Institution Code</label>
+                                    </div>
+                                    <div class="help-info">Institution Code</div>
+                                </div>
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" id="makerID" name="makerID" minlength="4" maxlength="19" required="" aria-required="true">
+                                        <label class="form-label">Enter Maker ID</label>
+                                    </div>
+                                    <div class="help-info">Maker ID</div>
+                                </div>
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="number" class="form-control" id="cardAlias" name="cardAlias" minlength="16" maxlength="19" required="" aria-required="true">
+                                        <label class="form-label">Enter Card Alias</label>
+                                    </div>
+                                    <div class="help-info">Card Alias</div>
+                                </div>
+                                <br>
+                                <div class="row clearfix js-sweetalert"> 
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-block btn-lg bg-red waves-effect" data-type="confirm" id="activateBtn">Activate</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
             </div>
         </div>
 
         <!-- Modal Body -->
-        <div class="modal fade" id="smallModal" tabindex="-1" role="dialog">
+        <!-- <div class="modal fade" id="smallModal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-sm" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -83,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+        </div> -->
     </div>
 
     <!-- Success -->
@@ -104,6 +141,7 @@
 
     <!-- Jquery Core Js -->
     <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="js/pages/forms/form-validation.js"></script>
 
     <!-- Bootstrap Core Js -->
     <script src="plugins/bootstrap/js/bootstrap.js"></script>
