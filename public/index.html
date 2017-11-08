@@ -65,7 +65,7 @@
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <select class="form-control show-tick" id="instCode" required>
+                                        <select class="form-control show-tick" id="instCode" required autocomplete="off">
                                             <option value=""></option>
                                             <option value="BPI">BPI</option>
                                             <option value="BFB">BFB</option>
@@ -77,32 +77,33 @@
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" id="makerID" name="makerID" minlength="4" maxlength="19" required="" aria-required="true">
+                                        <input type="text" class="form-control" id="makerID" name="makerID" minlength="4" maxlength="19" required="" aria-required="true" autocomplete="off">
                                         <label class="form-label">Enter Maker ID</label>
                                     </div>
                                     <div class="help-info">Maker ID</div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="number" class="form-control" id="cardAlias" name="cardAlias" minlength="16" maxlength="19" required="" aria-required="true">
+                                        <input type="number" class="form-control" id="cardAlias" name="cardAlias" minlength="16" maxlength="19" required="" aria-required="true" autocomplete="off">
                                         <label class="form-label">Enter Card Alias</label>
                                     </div>
                                     <div class="help-info">Card Alias</div>
                                 </div>
                                 <br>
-                                <div class="row clearfix js-sweetalert"> 
+                                <button class="btn btn-block btn-lg bg-red waves-effect" id="activateBtn">Activate</button>
+                                     
+                                <!-- <div class="row clearfix js-sweetalert"> 
                                     <div class="col-lg-12">
                                         <button class="btn btn-block btn-lg bg-red waves-effect" data-type="confirm" id="activateBtn">Activate</button>
                                     </div>
-                                </div>
+                                </div> -->
+
                             </form>
-
-
             </div>
         </div>
 
         <!-- Modal Body -->
-        <!-- <div class="modal fade" id="smallModal" tabindex="-1" role="dialog">
+        <div class="modal fade" id="smallModal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-sm" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -120,7 +121,7 @@
                         </div>
                     </div>
                 </div>
-        </div> -->
+        </div>
     </div>
 
     <!-- Success -->
@@ -137,7 +138,37 @@
             <a href="index.html" class="btn btn-default btn-lg waves-effect">GO TO HOMEPAGE</a>
             <!-- </button> -->
         </div>
-    </div>    
+    </div>
+    <!-- Invalid Cardf Alias -->
+    <div class="four-zero-four" hidden id="invalidAlias">
+        <div class="four-zero-four-container">
+            <div class="logo">
+                <a href="javascript:void(0);">
+                 <img alt="BPI&nbsp;Card Release" src="images/bpiLogo.png" width="40%;">
+                </a>            
+            </div>
+            <br><br><br>
+            <div class="error-message">Invalid Card Alias</div>
+            <!-- <button class="btn btn-default btn-lg waves-effect"> -->
+            <a href="index.html" class="btn btn-default btn-lg waves-effect">GO TO HOMEPAGE</a>
+            <!-- </button> -->
+        </div>
+    </div>
+    <!-- Maker ID does not exist -->
+    <div class="four-zero-four" hidden id="makerDntExist">
+        <div class="four-zero-four-container">
+            <div class="logo">
+                <a href="javascript:void(0);">
+                 <img alt="BPI&nbsp;Card Release" src="images/bpiLogo.png" width="40%;">
+                </a>            
+            </div>
+            <br><br><br>
+            <div class="error-message">Maker ID does not exist</div>
+            <!-- <button class="btn btn-default btn-lg waves-effect"> -->
+            <a href="index.html" class="btn btn-default btn-lg waves-effect">GO TO HOMEPAGE</a>
+            <!-- </button> -->
+        </div>
+    </div>       
 
     <!-- Jquery Core Js -->
     <script src="plugins/jquery/jquery.min.js"></script>
